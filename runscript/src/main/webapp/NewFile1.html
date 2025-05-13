@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Run Automation</title>
+<link rel="stylesheet" href="style.css">
+ 
+</head>
+<body>
+
+	<form action="runscript" method="post" onsubmit="return validateForm()">
+	 	<label for="scriptParam">Take Latest UAT Pull In All Repo</label> 
+	 
+	 		<button type="submit">Run Script</button><br>
+	 
+	
+	<label for="scriptParam1">Choose Environment:</label> 
+		<select name="param1" id="scriptParam1">
+	      <option value="" disabled selected hidden>-- Select ENV --</option>
+
+			<option value="automationOne">Automation One</option>
+			<option value="automationAWS">Automation AWS</option>
+			<option value="automationTwo">Automation Two</option>
+			<option value="automationThree">Automation Three</option>
+			<option value="swati">Swati</option>
+			<option value="shubham">Shubham</option>
+			<option value="astha">Astha</option>
+			<option value="manisha">Manisha</option>
+			<option value="anush">Anush</option>
+			
+		</select>
+		
+		<label for="scriptParam2">Choose Feature:</label> 
+		<select name="param2" id="scriptParam2">
+		 <option value="" disabled selected hidden>-- Select Feature --</option>
+		
+			<option value="arnsetting">ARN Setting</option>
+			<option value="aumReport">AUM Report</option>
+			<option value="additionalTxnsMFU">Additional txn MFU</option>
+			<option value="alertReports">Alert report</option>
+			<option value="alertReportsSearch">Alert Report search only</option>
+			<option value="allProductNew">All Product</option>
+			<option value="allReports">All client Report</option>
+			<option value="allTxnAtBSE">All Txn At BSE</option>
+			<option value="allTxnAtMFU">All Txn At MFU</option>
+			<option value="allTxnAtNSE">All Txn At NSE</option>
+			<option value="amcArnMapping">AMC ARN Mapping</option>
+			<option value="assetsAllocation">Asset Allocation</option>
+			<option value="aumGrowthReport">AUM Growth Report</option>
+			<option value="aumReconciliation">AUM Reconcilation</option>
+			<option value="AUMRePortSearch">AUM Report Search Only</option>
+			<option value="brokerageEarningRate">Brokerage Earning Rate</option>
+			<option value="brokerDashboard">Broker Dashboard</option>
+			<option value="brokerSettings">Broker Settings</option>
+			<option value="bseAdditionalTxns">Additional TXN BSE</option>
+			<option value="bseBulkOrders">BSE Bulk Order</option>
+			<option value="bseCredentionalSetting">BSE Setting</option>
+			<option value="bseFundPicks">BSE Fund Picks</option>
+			<option value="bseProfileList">BSE ProfileList</option>
+			<option value="businessAnalytics">Business Analytics</option>
+			<option value="capitalGainRealized">Capital gain realized</option>
+			<option value="capitalGainUnrealized">Capital gain UnRealized</option>
+			<option value="cashFlow">Cash Flow</option>
+			<option value="clientAcquisitionnReport">Client Acquisition  Report</option>
+		</select>
+
+		<button type="submit">Run Automation Script</button>
+		<script>
+function validateForm() {
+    var select = document.getElementById("scriptParam");
+    if (select.value === "") {
+        alert("Please select a log file before submitting.");
+        return false;
+    }
+    return true;
+}
+</script>
+	</form>
+
+
+
+</body>
+</html>
